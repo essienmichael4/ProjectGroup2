@@ -1,7 +1,43 @@
+<!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-works
-</body>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<title>Huet</title>
+	</head>
+	<body>
+	<header>
+		<div>
+			<h1>Huet</h1>
+		<div>
+	</header>
+
+	<section>
+		<div class="container">
+			<div class="Hue">
+				<div class="label">
+					<label><h1>Humidty</h1></label>
+				</div>
+				<div class="input">
+					<input class="style_input">
+				</div>
+				<div class="button">
+					<button class="style_button"><h3>Check</h3></button>
+				</div>
+			</div>
+
+			<div class="Temp">
+				<div class="label">
+                                	<label><h1>Temperature</h1></label>
+				</div>
+				<div class="input">
+                                	<input class="style_input">
+				</div>
+				<div class="button">
+                                	<button class="style_button">Check</button>
+				</div>
+                        </div>
+		</div>
+	</section>
+	</body>
 </html>
