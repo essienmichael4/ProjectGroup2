@@ -14,6 +14,7 @@
 
 	<section>
 		<div class="container">
+		<form>
 			<div class="Hue">
 				<div class="label">
 					<label><h1>Humidty</h1></label>
@@ -25,19 +26,27 @@
 					<button class="style_button"><h3>Check</h3></button>
 				</div>
 			</div>
-
+		</form>
+		<form>
 			<div class="Temp">
 				<div class="label">
                                 	<label><h1>Temperature</h1></label>
 				</div>
 				<div class="input">
-                                	<input class="style_input">
+                                	<input class="style_input" value={{temperature}}>
 				</div>
 				<div class="button">
-                                	<button class="style_button">Check</button>
+					<form method="POST" action="/">
+                                	<button type="submit" formmethod="post" class="style_button" name="temperature" value="temperature">Check</button>
+					</form>
 				</div>
                         </div>
+		</form>
 		</div>
+
+		<footer>
+			Copyright &copy; 2019
+		</footer>
 	</section>
 	</body>
 </html>
