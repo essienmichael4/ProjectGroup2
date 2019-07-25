@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import requests
 import json
-import pyowm
+
 app = Flask(__name__)
 
 
@@ -11,18 +11,18 @@ app = Flask(__name__)
     
 @app.route('/', methods=['GET', 'POST'])
 def index():
-	temp = ""
-	humid = ""
-	if request.method == 'POST':
-		if request.form.get('temperature')=='temperature':
+    temp = ""
+    humid = ""
+    if request.method == 'POST':
+        if request.form.get('temperature')=='temperature':
 
-			temp = requests.get('http://192.168.43.231:5000/api/temperature').json()['temperature']
+            temp = requests.get('http://192.168.43.231:5000/api/temperature').json()['temperature']
 
 
-		if request.form.get('humidity')=='humidity':
+        if request.form.get('humidity')=='humidity':
 
-			humid = requests.get('http://192.168.43.231:5000/api/humidity').json()['humidity']
-	return render_template('index.html', temperature = temp, humidity = humid)
+            humid = requests.get('http://192.168.43.231:5000/api/humidity').json()['humidity']
+    return render_template('index.html', temperature = temp, humidity = humid)
 #def get_data():
     #return requests.get('http://192.168.43.231:5000/api/humidity').content
     
