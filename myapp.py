@@ -5,8 +5,8 @@ import pyowm
 app = Flask(__name__)
 
 
-def get_data():
-    return request.get('http://192.168.43.231:5000/api/humidity').content
+#def get_data():
+ #   return request.get('http://192.168.43.231:5000/api/humidity').content
     
     
 @app.route('/', methods=['GET', 'POST'])
